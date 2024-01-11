@@ -1,0 +1,206 @@
+\section{Lineární rekurentní rovnice}
+
+\subsection*{Definice LRR}
+
+\textbf{Lineární rekurentní rovnice řádu $k \in \mathbb{N}$} (zkráceně LRR) je rovnice tvaru
+
+\[ x_{n+k} + c_{k-1,n} \cdot x_{n+k-1} + \cdots + c_{1,n} \cdot x_{n+1} + c_{0,n} \cdot x_n = b_n, \quad n \in \mathbb{Z}, \ n \geq n_0, \]
+
+\noindent kde $n_0 \in \mathbb{Z}$ a $(c_{i,n})_{n=n_0}^\infty$, $i = 0,1,\ldots,k-1$, (tzv. koeficienty rovnice) a $(b_n)_{n=n_0}^\infty$ (tzv. pravá strana rovnice) jsou zadané posloupnosti a posloupnost $(c_{0,n})_{n=n_0}^\infty$ není nulová posloupnost.
+Jestliže $b_n = 0$ pro každé $n \geq n_0$, pak se příslušná rovnice nazývá \textbf{homogenní}.
+\textbf{Přidruženou homogenní rovnicí} k originální rovnici nazýváme LRR se stejnými koeficienty a nulovou pravou stranou ($b_n = 0$ pro každé $n \geq n_0$).
+
+\subsection*{Řešení LRR}
+
+Nechť je dána lineární rekurentní rovnice řádu $k \in \mathbb{N}$,
+
+\[ x_{n+k} + c_{k-1,n} x_{n+k-1} + \cdots + c_{1,n} x_{n+1} + c_{0,n} x_n = b_n, \quad n \in \mathbb{Z}, \ n \geq n_0. \]
+
+\noindent Jejím \textbf{řešením} nazveme libovolnou posloupnost $(x_n)_{n=n_0}^\infty$ takovou, že dosazením jejích členů do rovnice dostaneme pravdivé rovnosti pro každé celočíselné $n \geq n_0$.
+
+\subsection*{Počáteční podmínky}
+
+Nechť je dána lineární rekurentní rovnice řádu $k \in \mathbb{N}$,
+
+\[ x_{n+k} + c_{k-1,n} x_{n+k-1} + \cdots + c_{1,n} x_{n+1} + c_{0,n} x_n = b_n,
+    \quad n \in \mathbb{Z}, \ n \geq n_0. \]
+
+\noindent \textbf{Počátečními podmínkami} pro tuto rovnici nazveme libovolnou soustavu rovností $x_{n_0} = A_0$, $x_{n_0 + 1} = A_1$, ..., $x_{n_0 + k - 1} = A_{k-1}$, pro zadané hodnoty $A_0,\ldots,A_{k-1} \in \mathbb{R}$.
+
+\subsection*{Věta o existenci a jednoznačnosti řešení LRR}
+
+Platí dvě následující tvrzení.
+
+\begin{enumerate}
+    \item Každá lineární rekurentní rovnice má \textbf{nějaké} řešení.
+    \item  Je-li dána lineární rekurentní rovnice řádu $k \in \mathbb{N}$ s předepsanými
+          počátečními podmínkami, pak existuje \textbf{právě jedno} řešení této rovnice
+          splňující tyto počáteční podmínky.
+\end{enumerate}
+
+\subsection*{Princip superpozice}
+
+Uvažme dvě LRR $k$-tého řádu s ne nutně shodnými pravými stranami,
+
+\[ x_{n+k} + \sum_{i=0}^{k-1} c_{i,n} x_{n+i} = \textcolor{red}{b_n}, \]
+
+\noindent a
+
+\[ x_{n+k} + \sum_{i=0}^{k-1} c_{i,n} x_{n+i} = \textcolor{red}{\tilde{b}_n}, \]
+
+\noindent pro $n \in \mathbb{Z}$, $n \geq n_0$. Je-li $(X_n)_{n = n_0}^\infty$ řešení první
+rovnice a $(Y_n)_{n = n_0}^\infty$ řešení druhé rovnice, potom pro libovolnou
+konstantu $\alpha$ je posloupnost $(X_n + \alpha Y_n)_{n = n_0}^\infty$ řešením
+LRR
+
+\[ x_{n+k} + \sum_{i=0}^{k-1} c_{i,n} x_{n+i} = \textcolor{red}{b_n + \alpha \tilde b_n}, \quad n \geq n_0. \]
+
+\subsection*{Věta o struktuře množiny řešení LRR}
+
+Mějme LRR řádu $k \in \mathbb{N}$ tvaru
+
+\[ x_{n+k} + \sum_{i=0}^{k-1} c_{i,n} x_{n+i} = b_n, \quad n \in \mathbb{Z}, \ n \geq n_0, \]
+
+\noindent a označme množinu všech jejích řešení symbolem $S$ a množinu všech řešení přidružené homogenní rovnice symbolem $S_0$.
+Potom platí následující tvrzení:
+
+\begin{enumerate}
+    \item Množina $S_0$ je vektorový prostor dimenze $k$.
+    \item Množina $S$ je tvaru $S = (\tilde{x}_n)_{n=n_0}^\infty + S_0$, kde
+          $(\tilde{x}_n)_{n=n_0}^\infty$ je (partikulární) řešení rovnice.
+\end{enumerate}
+
+\subsection*{LRR s konstantními koeficienty}
+
+\textbf{Lineární rekurentní rovnice řádu $k \in \mathbb{N}$ s konstantními koeficienty} je lineární rekurentní rovnice řádu $k$ tvaru
+
+\[ x_{n+k} + c_{k-1} \cdot x_{n+k-1} + \cdots + c_{1} \cdot x_{n+1} + c_{0} \cdot x_n = b_n, \quad n \in \mathbb{Z}, \ n \geq n_0, \]
+
+\noindent kde $n_0 \in \mathbb{Z}$ a $c_{i} \in \mathbb{R}$, $i = 0,1,\ldots,k-1$, $c_0 \neq 0$, jsou zadané konstanty a $(b_n)_{n=n_0}^\infty$ je zadaná posloupnost.
+
+\subsection*{Charakteristický polynom LRR s konstantními koeficienty}
+
+\textbf{Charakteristickým polynomem} LRRsKK nazýváme polynom stupně $k$ tvaru
+
+\[ p(\lambda) = \lambda^k + c_{k-1} \lambda^{k - 1} + \cdots + c_1 \lambda + c_0. \]
+
+\noindent Kořeny tohoto polynomu se nazývají \textbf{charakteristická (nebo vlastní) čísla} LRRsKK.
+
+\subsection*{Konstrukce řešení homogenní LRR pomocí charakteristického čísla}
+
+Jestliže $\lambda$ je charakteristickým číslem homogenní LRR s konstantními
+koeficienty řádu $k\in\mathbb{N}$
+
+\[ x_{n+k} + c_{k-1} x_{n+k-1} + \cdots + c_1 x_{n+1} + c_0 x_{n} = 0, \quad n \geq n_0, \]
+
+\noindent pak posloupnost $(\lambda^n)_{n=n_0}^\infty$ je jejím řešením.
+
+\subsection*{Řešení homogenní LRR s konstantními koeficienty, jednoduchá charakteristická čísla}
+
+Uvažujme homogenní LRR s konstantními koeficienty řádu $k \in \mathbb{N}$
+
+\[ x_{n+k} + c_{k-1} x_{n+k-1} + \cdots + c_1 x_{n+1} + c_0 x_{n} = 0, \quad n \geq n_0. \]
+
+\noindent Jestliže má $k$ vzájemně různých charakteristických čísel $\lambda_i$, $i\in\hat{k}$, pak soubor posloupností $(\lambda_i^n)_{n=n_0}^\infty$, $i\in\hat{k}$, tvoří bázi $S_0$, tedy libovolné řešení $(x_n)_{n=n_0}^\infty \in S_0$ je tvaru
+
+\[ x_n = \alpha_1 \lambda_1^n + \cdots + \alpha_k \lambda_k^n, \quad n \geq n_0, \]
+
+\noindent pro nějaké konstanty $\alpha_1, \ldots, \alpha_k$.
+
+\subsection*{Konstrukce řešení homogenní LRR pomocí charakteristického čísla vyšší násobnosti}
+
+Jestliže $\lambda$ je charakteristickým číslem homogenní LRR řádu
+$k\in\mathbb{N}$ s konstantními koeficienty
+
+\[ x_{n+k} + c_{k-1} x_{n+k-1} + \cdots + c_1 x_{n+1} + c_0 x_{n} = 0, \quad n \geq n_0, \]
+
+\noindent a jeho násobnost je $m$, pak posloupnosti $(\lambda^n)_{n=n_0}^\infty$, $(n\lambda^n)_{n=n_0}^\infty$, \ldots, $(n^{m-1}\lambda^n)_{n=n_0}^\infty$ jsou jejím řešením a tvoří LN soubor.
+
+\subsection*{Konstrukce prostoru všech řešení homogenní LRR}
+
+Uvažujme homogenní LRR řádu $k \in \mathbb{N}$~s konstantními koeficienty
+
+\[ x_{n+k} + c_{k-1} x_{n+k-1} + \cdots + c_1 x_{n+1} + c_0 x_{n} = 0, \quad n \geq n_0. \]
+
+\noindent Jestliže má $K$ vzájemně různých charakteristických čísel $\lambda_i$, $i\in\hat{K}$, každé s násobností $m_i \in \hat{K}$, pak soubor posloupností
+
+\begin{gather}
+    \Big( (\lambda_1^n)_{n=n_0}^\infty, \ (n\lambda_1^n)_{n=n_0}^\infty, \ \ldots, (n^{m_1-1} \lambda_1^n)_{n=n_0}^\infty, \ \ldots, \\  (\lambda_K^n)_{n=n_0}^\infty, \ (n\lambda_K^n)_{n=n_0}^\infty, \ \ldots, (n^{m_K-1} \lambda_K^n)_{n=n_0}^\infty \Big)
+\end{gather}
+
+\noindent tvoří bázi $S_0$.
+
+\subsection*{Shrnutí konstrukce množiny všech řešení homogenní LRR}
+
+Uvažme LRR $k$-tého řádu s konstantními koeficienty a nulovou pravou stranou.
+Bázi $\mathcal{B}$ podprostoru $S_0$ konstruujeme v následujících krocích:
+
+\begin{enumerate}
+    \item Sestavme charakteristický polynom $p(\lambda)$ a nalezněme jeho kořeny.
+    \item Za každé reálné charakteristické číslo $\lambda$ přidáme do $\mathcal{B}$
+          posloupnost $(\lambda^n)_{n=n_0}^\infty$.
+    \item Za každé reálné charakteristické číslo $\lambda$ násobnosti $m > 1$ přidáme do
+          $\mathcal{B}$ posloupnosti $(n \lambda^n)_{n=n_0}^\infty$, \ldots,
+          $(n^{m-1}\lambda^n)_{n=n_0}^\infty$.
+    \item Za každá dvě komplexně sdružená charakteristická čísla $\lambda = r(\cos
+              \varphi \pm i \sin \varphi)$, která nejsou reálná, přidáme do souboru
+          $\mathcal{B}$ dvě reálné posloupnosti $(r^n \cos n\varphi)_{n=n_0}^\infty$ a
+          $(r^n \sin n\varphi)_{n=n_0}^\infty$.
+    \item Za každá dvě komplexně sdružená charakteristická čísla $\lambda = r(\cos
+              \varphi \pm i \sin \varphi)$, která nejsou reálná a mají násobnost $m > 1$,
+          přidáme do souboru $\mathcal{B}$ reálné posloupnosti $(n r^n \cos
+              n\varphi)_{n=n_0}^\infty$, \ldots, $(n^{m-1} r^n \cos n\varphi)_{n=n_0}^\infty$
+          a dále $(n r^n \sin n\varphi)_{n=n_0}^\infty$, \ldots, $(n^{m-1} r^n \sin
+              n\varphi)_{n=n_0}^\infty$.
+\end{enumerate}
+
+\subsection*{Kvazipolynom}
+
+Řekneme, že posloupnost $(b_n)_{n=n_0}^\infty$ je \textbf{kvazipolynom}, jestliže existuje $\lambda\in\mathbb{R}$ a polynom $P(x)$ takový, že $b_n = P(n) \lambda^n$ pro všechna přirozená $n \geq n_0$.
+
+\subsection*{Partikulární řešení LRR s kvazipolynomiální pravou stranou}
+
+Uvažujme nehomogenní LRR řádu $k \in \mathbb{N}$ s konstantními koeficienty
+
+\[ x_{n+k} + c_{k-1} x_{n+k-1} + \cdots + c_1 x_{n+1} + c_0 x_{n} = b_n, \quad n \geq n_0, \]
+
+\noindent a nechť $(b_n)_{n=n_0}^\infty$ je kvazipolynom, tj. $b_n = P(n) \lambda^n$, $n \geq n_0$, pro nějaký polynom $P(x)$ a číslo $\lambda\in\mathbb{R}$.
+Definujme $m \in \mathbb{N}_0$ následujícím způsobem:
+
+\begin{itemize}
+    \item pokud je $\lambda$ charakteristické číslo uvažované LRR, pak nechť $m$ je jeho
+          násobnost,
+    \item jinak nechť $m$ je nula.
+\end{itemize}
+
+\noindent Potom existuje polynom $Q(x)$ stupně stejného jako $P(x)$ takový, že
+posloupnost
+
+\[ \Big( n^m Q(n) \lambda^n \Big)_{n = n_0}^\infty \]
+
+\noindent je řešením uvažované LRR.
+
+\subsection*{Mistrovská metoda}
+
+Nechť $a \geq 1$ a $b > 1$ jsou reálné konstanty, $f$ kladná funkce jedné
+proměnné. Uvažujme rekurentní rovnici
+
+\[ T(n) = a \cdot T\left( \frac{n}{b} \right) + f(n), \]
+
+\noindent kde $\frac{n}{b}$ v argumentu může znamenat i $\lceil \frac{n}{b} \rceil$ nebo $\lfloor \frac{n}{b} \rfloor$.
+
+\noindent Potom (všechny vztahy myšleny pro $n \to \infty$):
+
+\begin{enumerate}
+    \item Pokud $f(n) = \mathcal{O}(n^{\log_b(a) - \varepsilon})$ pro nějaké $\varepsilon
+              > 0$, potom $T(n) = \Theta(n^{\log_b(a)})$.
+    \item Pokud $f(n) = \Theta(n^{\log_b(a)})$, pak $T(n) = \Theta\big(n^{\log_b(a)}
+              \cdot \ln(n)\big)$.
+    \item Pokud $f(n) = \Omega(n^{\log_b(a) + \varepsilon})$ pro nějaké $\varepsilon > 0$
+          a pokud existuje $d \in (0, 1)$ a $n_0 \in \mathbb{N}$ takové, že
+
+          \[ a f\left( \frac{n}{b} \right) \leq d \cdot f(n), \quad \text{pro každé} \ n \geq n_0, \]
+          \noindent pak $T(n) = \Theta(f(n))$.
+\end{enumerate}
+
+\pagebreak
