@@ -1,3 +1,109 @@
 \section{Taylorovy polynomy}
 
+\subsection*{Polynom}
+
+Reálnou funkci reálné proměnné $p: \mathbb{R} \to \mathbb{R}$ nazveme
+\textbf{polynomem}, právě když existuje nezáporné celé číslo $n\in\mathbb{N}_0$
+a reálná čísla $a_0, \ldots, a_n \in \mathbb{R}$ taková, že rovnost
+
+\[ p(x) = \sum_{k=0}^n a_k x^k \]
+
+\noindent platí pro všechna reálná $x\in\mathbb{R}$.
+
+\subsection*{Taylorův polynom}
+
+Nechť reálná funkce reálné proměnné $f$ má v bodě $a\in\mathbb{R}$ konečnou
+$n$-tou derivaci. Polynom
+
+\[ T_{n,a}(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x-a)^k \]
+
+\noindent nazýváme \textbf{$n$-tým Taylorovým polynomem funkce $f$ v bodě $a$}
+
+\subsection*{Věta o vlastnostech Taylorova polynomu}
+
+Nechť reálná funkce reálné proměnné $f$ má v bodě $a\in\mathbb{R}$ konečnou
+$n$-tou derivaci. Potom Taylorův polynom $T_{n,a}$ existuje a je to jediný
+polynom stupně nejvýše $n$ takový, že
+
+\[ T_{n,a}^{(k)}(a) = f^{(k)}(a) \ \text{pro každé} \ k=0,1,\ldots,n. \]
+
+\subsection*{Taylorův vzorec a Taylorův zbytek}
+
+Nechť funkce $f$ má v bodě $a$ konečnou $n$-tou derivaci. Pro všechna přípustná
+$x$ položme $R_{n,a}(x) \equiv f(x) - T_{n,a}(x)$. Potom vztah
+
+\[ f(x) = T_{n,a}(x) + R_{n,a}(x) \]
+
+\noindent nazýváme \textbf{Taylorovým vzorcem} a $R_{n,a}$ nazýváme \textbf{$n$-tým zbytkem} v Taylorově vzorci.
+
+\subsection*{Věta o zbytku v Taylorově vzorci}
+
+Nechť funkce $f$ má v jistém okolí $U_a$ bodu $a$ spojitou $n$-tou derivaci.
+Pak pro zbytek v Taylorově vzorci platí
+
+\[ \lim_{x\to a} \frac{R_{n,a}(x)}{(x-a)^n} = 0. \]
+
+\subsection*{Věta o nejlepší aproximaci}
+
+Nechť funkce $f$ má v jistém okolí bodu $0$ konečnou $n$-tou derivaci a nechť
+$Q$ je polynom stupně nejvýše $n$, různý od Taylorova polynomu $T_n$ funkce $f$
+v bodě $0$. Potom existuje okolí $U_0$ bodu $0$ takové, že
+
+\[ |f(x) - T_n(x)| < |f(x) - Q(x)| \quad \textrm{pro každé} \ x\in U_0 \smallsetminus \{0\}. \]
+
+\subsection*{Taylorova věta}
+
+Nechť existuje okolí $U_a$ bodu $a$ takové, že funkce $f$ v něm má konečnou
+$(n+1)$ -ní derivaci. Pak zbytek v Taylorově vzorci $f(x) = T_{n,a}(x) +
+    R_{n,a}(x)$ lze pro každé $x\in U_a$ zapsat ve tvaru
+
+\[ R_{n,a}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} (x-a)^{n+1}, \]
+
+\noindent kde číslo $\xi$ závisí na $x$ a $n$ a leží uvnitř intervalu s krajními body $x$
+a $a$. Tento tvar zbytku nazýváme \textbf{Lagrangeův}.
+
+\subsection*{Mocninná řada}
+
+Nechť je dána posloupnost $(a_k)_{k=0}^\infty$ a číslo $c\in\mathbb{R}$.
+Číselnou řadu
+
+\[ \sum_{k=0}^\infty a_k (x-c)^k, \]
+
+\noindent závisející na reálném parametru $x$, nazýváme \textbf{mocninnou řadou se
+    středem v bodě $c$}.
+
+\subsection*{Taylorova řada}
+
+Nechť reálná funkce reálné proměnné $f$ má v bodě $c \in \mathbb{R}$ konečné
+derivace všech řádů. Mocninnou řadu
+
+\[ \sum_{k=0}^\infty \frac{f^{(k)}(c)}{k!} (x-c)^k \]
+
+\noindent potom nazýváme \textbf{Taylorovou řadou funkce $f$ v bodě $c$}.
+
+\subsection*{Věta o poloměru konvergence}
+
+Pokud existuje limita
+
+\[ L := \lim_{k\to\infty} \bigg|\frac{a_{k+1}}{a_k}\bigg|, \]
+
+\noindent potom klademe
+
+\[ R := \begin{cases} \frac{1}{L}, & L > 0, \\ +\infty, & L = 0, \\ 0, & L = +\infty \end{cases} \]
+
+\noindent a tvrdíme, že mocninná řada
+
+\[ \sum_{k = 0}^\infty a_k (x-c)^k  \]
+
+\noindent \textbf{konverguje absolutně} pro $x\in(c-R,c+R)$ a diverguje pro $|c-x| > R$.
+
+\subsection*{Cauchyho--Hadamardova věta}
+
+Ke každé mocninné řadě tvaru
+
+\[ \sum_{k=0}^\infty a_k x^k. \]
+
+\noindent existuje $R\in\langle 0,+\infty\rangle$ takové, že řada absolutně konverguje
+pro $|x| < R$ a diverguje pro $|x| > R$.
+
 \pagebreak
