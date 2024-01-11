@@ -1,0 +1,75 @@
+\section{Neurčitý integrál}
+
+\subsection*{Primitivní funkce}
+
+Nechť $f$ je funkce definovaná na intervalu $(a, b)$, kde $-\infty \leq a \leq
+    b \leq \infty$. Funkci $F$ splňující
+
+\[ F'(x) = f(x), \forall  x \in (a, b)\]
+
+\noindent nazýváme \textbf{primitivní funkcí} k funkci $f$ na intervalu $(a, b)$.
+
+\subsection*{Věta o jednoznačnosti primitivní funkce}
+
+Nechť $F$ je primitivní funkcí k funkci $f$ na intervalu $(a, b)$. Pak $G$ je
+primitivní funkcí k funkci $f$ na intervalu $(a, b)$ právě tehdy, když existuje
+konstanta $C \in \mathds{R}$ taková, že
+
+\[ G(x) = F(x) + C, \forall x \in (a, b)\]
+
+\subsection*{Neurčitý integrál}
+
+Nechť k funkci $f$ existuje primitivní funkce na intervalu $(a, b)$. Množinu
+všech primitivních funkcí k funkci $f$ na $(a, b)$ nazýváme \textbf{neurčitým
+    integrálem} a značíme jej $\int f$ nebo $\int f(x)dx$
+
+\subsection*{Postačující podmínka pro existenci primitivní funkce}
+
+Nechť funkce $f$ je spojitá na intervalu $(a, b)$. Pak má funkce $f$ na tomto
+intervalu primitivní funkci.
+
+\subsection*{Linearita primitivní funkce}
+
+Nechť $F$, resp. $G$, je primitivní funkce k funkci $f$, resp. $g$, na
+intervalu $(a, b)$ a nechť $\alpha \in \mathds{R}$. Pak
+
+\begin{itemize}
+    \item $F + G$ je primitivní funkcí k funkci $f + g$ na intervalu $(a, b)$.
+    \item $\alpha F$ je primitivní funkcí k funkci $\alpha f$ na intervalu $(a, b)$.
+\end{itemize}
+
+\subsection*{Integrace per partes}
+
+Nechť funkce $f$ je diferencovatelná na intervalu $(a, b)$ a $G$ je primitivní
+funkce k funkci $g$ na intervalu $(a, b)$ a konečně nechť existuje primitivní
+funkce k funkci $f'G$. Potom existuje primitivní funkce k funkci $fg$ a platí
+
+\[ \int fg = fG - \int f'G\]
+
+\subsection*{První věta o substituci}
+
+Nechť pro funkce $f$ a $\varphi$ platí
+
+\begin{enumerate}
+    \item $f$ má primitivní funkci $F$ na intervalu $(a, b)$,
+    \item $\varphi$ je na intervalu $(\alpha, \beta)$ diferencovatelná,
+    \item $\varphi((\alpha, \beta) \subset (a, b))$.
+\end{enumerate}
+
+\noindent Pak funkce $f(\varphi(x))\cdot \varphi'(x)$ má primitivní funkci na intervalu $(\alpha, \beta)$ a platí
+
+\[ \int f(\varphi(x)) \cdot \varphi'(x) dx = F(\varphi(x)) + C \]
+
+\noindent kde $C$ je integrační konstanta.
+
+\subsection*{Druhá věta o substituci}
+
+Nechť $f$ je definována na intervalu $(a, b)$ a nechť $\varphi$ je bijekce
+intervalu $(\alpha, \beta)$ na $(a, b)$ s nenulovou konečnou derivací. Pak
+platí
+
+\[ \int f(\varphi(t))\varphi'(x)dt = G(t) + C \Rightarrow \int f(x)dx = G(\varphi^{-1}(x)) + C \]
+
+\noindent kde $C$ je integrační konstanta.
+
+\pagebreak

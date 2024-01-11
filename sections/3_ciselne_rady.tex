@@ -1,0 +1,167 @@
+\section{Číselné řady}
+
+\subsection*{Definice číselné řady}
+
+Formální výraz tvaru
+
+\[ \sum_{k=n_0}^\infty a_k = a_{n_0} + a_{n_0 + 1} + a_{n_0 + 2} + \cdots, \]
+
+\noindent kde $(a_k)_{k=n_0}^\infty$ je zadaná číselná posloupnost, nazýváme \textbf{číselnou
+    řadou}. Pokud je \textbf{posloupnost částečných součtů}
+$(s_n)_{n=n_0}^\infty$ definovaná předpisem
+
+\[ s_n \equiv \sum_{k=n_0}^n a_k, \quad n\in\mathbb{N}_0, n \geq n_0, \]
+
+\noindent konvergentní, nazýváme příslušnou řadu také konvergentní. V opačném
+případě o ní mluvíme jako o divergentní číselné řadě.
+Součtem konvergentní řady $\sum_{k=n_0}^\infty a_k$ nazýváme hodnotu
+limity $\displaystyle\lim_{n\to\infty} s_n$.
+
+\subsection*{Nutná podmínka konvergence}
+
+Pokud řada $\sum_{k=0}^\infty a_k$ konverguje, potom pro limitu jejích sčítanců
+platí $\displaystyle \lim_{k\to\infty} a_k = 0$.
+
+\subsection*{Bolzanovo--Cauchyovo kritérium pro řady}
+
+Řada $\displaystyle\sum_{k=0}^\infty a_k$ konverguje právě tehdy, když pro každé $\epsilon > 0$ existuje $n_0 \in \mathbb{R}$ tak, že pro každé přirozené $n \geq n_0$ a $p \in \mathbb{N}$ platí
+
+\[ |a_n + a_{n+1} + \cdots + a_{n+p}| < \epsilon. \]
+
+\subsection*{Absolutní konvergence}
+
+Číselnou řadu $\sum_{k=0}^\infty a_k$ nazýváme \textbf{absolutně konvergentní}, pokud číselná řada $\sum_{k=0}^\infty |a_k|$ konverguje.
+
+\subsection*{O vztahu absolutní konvergence a konvergence}
+
+Pokud řada absolutně konverguje, \textbf{potom} tato řada konverguje.
+
+\subsection*{Leibnizovo kritérium}
+
+Buď $(a_k)_{k=0}^\infty$ monotónní posloupnost konvergující k nule. Potom je
+řada
+
+\[ \sum_{k=0}^\infty (-1)^k a_k \]
+
+\noindent konvergentní.
+
+\subsection*{Srovnávací kritérium}
+
+Buďte $\sum_{k=0}^\infty a_k$ a $\sum_{k=0}^\infty b_k$ číselné řady. Potom
+platí následující dvě tvrzení.
+
+\begin{enumerate}
+    \item Nechť existuje $k_0 \in \mathbb{N}$ takové, že pro každé $k\in\mathbb{N}$ větší
+          než $k_0$ platí nerovnosti $0 \leq |a_k| \leq b_k$ a nechť řada
+          $\sum_{k=0}^\infty b_k$ konverguje. Potom řada $\sum_{k=0}^\infty a_k$
+          absolutně konverguje.
+    \item Nechť existuje $k_0 \in \mathbb{N}$ takové, že pro každé $k\in\mathbb{N}$ větší
+          nebo rovno než $k_0$ platí nerovnosti $0 \leq a_k \leq b_k$ a
+          $\sum_{k=0}^\infty a_k$ diverguje. Potom i řada $\sum_{k=0}^\infty b_k$
+          diverguje.
+\end{enumerate}
+
+\subsection*{D'Alembertovo kritérium}
+
+Nechť $a_k > 0$ pro každé $k\in\mathbb{N}_0$. Pokud
+
+\[ \lim_{k\to\infty} \frac{a_{k+1}}{a_k} > 1, \]
+
+\noindent potom řada $\displaystyle\sum_{k=0}^\infty a_k$ diverguje. Pokud ovšem
+
+\[ \lim_{k\to\infty} \frac{a_{k+1}}{a_k} < 1, \]
+
+\noindent potom řada $\displaystyle\sum_{k=0}^\infty a_k$ konverguje.
+
+\subsection*{O odhadu posloupnosti částečných součtů}
+
+Nechť $f$ je spojitá funkce na $\langle 1,+\infty)$ a $n\in\mathbb{N}$. Je-li
+$f$ klesající, pak platí
+
+\[ f(n) + \int_1^n f(x) \,\mathrm{d} x \leq \sum_{k=1}^n f(k) \leq f(1) + \int_1^n f(x) \,\mathrm{d}x. \]
+
+\noindent Je-li $f$ rostoucí, pak platí
+
+\[ f(1) + \int_1^n f(x) \,\mathrm{d} x \leq \sum_{k=1}^n f(k) \leq f(n) + \int_1^n f(x) \,\mathrm{d}x. \]
+
+\subsection*{Integrální kritérium}
+
+Buď $\displaystyle\sum_{n=1}^\infty a_n$ číselná řada s kladnými členy taková,
+že existuje spojitá a monotónní funkce definovaná na $\langle 1,+\infty)$
+taková, že $f(n) = a_n$ pro každé $n$. Potom
+
+\begin{itemize}
+    \item Pokud (zobecněný Riemannův) integrál $\displaystyle\int_1^\infty
+              f(x)\,\mathrm{d}x$ konverguje, pak číselná řada $\displaystyle\sum_{n=1}^\infty
+              a_n$ konverguje.
+    \item Pokud integrál $\displaystyle\int_1^\infty f(x)\,\mathrm{d}x$ diverguje, pak
+          číselná řada $\displaystyle\sum_{n=1}^\infty a_n$ diverguje.
+\end{itemize}
+
+\subsection*{Exponenciální funkce a Eulerovo číslo}
+
+Zobrazení, které každému $x\in\mathbb{R}$ přiřazuje součet konvergentní řady
+
+\[ \sum_{k=0}^\infty \frac{x^k}{k!}, \]
+
+\noindent nazýváme \textbf{exponenciální funkcí}. Její funkční hodnotu v bodě $x$
+značíme symbolem $e^x$. Platí tedy
+
+\[ e^x \equiv \sum_{k=0}^\infty \frac{x^k}{k!}, \quad x\in\mathbb{R}. \]
+
+\subsection*{Základní vlastnosti exponenciální funkce}
+
+Exponenciální funkce oplývá následujícími vlastnostmi:
+
+\begin{enumerate}
+    \item $e^0 = 1$,
+    \item pro všechna $x,y\in\mathbb{R}$ platí $e^{x+y} = e^x e^y$,
+    \item pro všechna $x\in\mathbb{R}$ platí $e^x > 0$ a dále $e^{-x} = \frac{1}{e^x}$,
+    \item exponenciála je ostře rostoucí funkce, pro všechna $x,y \in \mathbb{R}$
+          splňující nerovnost $x < y$ platí nerovnost $e^x < e^y$.
+\end{enumerate}
+
+\subsection*{Eulerovo číslo}
+\textbf{Eulerovo číslo} definujeme pomocí exponenciální funkce předpisem
+
+\[ e \equiv e^1 = \sum_{k=0}^\infty \frac{1}{k!}. \]
+
+\noindent \textbf{Eulerovo číslo} je iracionální.
+
+\subsection*{Přirozený logaritmus}
+
+Existuje tedy inverzní funkce k exponenciále, která je také ostře rostoucí a
+zobrazuje $(0,+\infty)$ na $\mathbb{R}$. Tuto funkci nazýváme
+\textbf{přirozeným logaritmem} a značíme symbolem $\ln$.
+
+\subsection*{Vlastnosti přirozeného logaritmu}
+
+Přirozený logaritmus $\ln$ oplývá následujícími vlastnostmi:
+
+\begin{enumerate}
+    \item pro každé $x\in\mathbb{R}$ platí $\ln e^x = x$ a pro každé $x\in(0,+\infty)$
+          platí
+    \item $e^{\ln x} = x$,
+    \item $\ln e = 1$ a $\ln 1 = 0$,
+    \item pro $x,y \in (0,+\infty)$ platí $\ln(xy) = \ln x + \ln y$.
+\end{enumerate}
+
+\subsection*{Obecná mocnina}
+
+Pro $a\in(0,+\infty)$ a $x\in\mathbb{R}$ definujeme
+
+\[ a^x \equiv e^{x\ln a}. \]
+
+\subsection*{Vlastnosti obecné mocniny}
+
+Pro $a,b > 0$ platí
+
+\begin{enumerate}
+    \item $a^{x+y} = a^x a^y$,
+    \item $\big(a^x\big)^y = a^{xy}$,
+    \item $(ab)^x = a^x b^x$.
+\end{enumerate}
+
+\noindent pro libovolná $x,y\in\mathbb{R}$.
+
+\pagebreak

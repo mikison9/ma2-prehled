@@ -5,6 +5,9 @@
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{rotating}
+\usepackage{import}
+\usepackage{dsfont}
+\usepackage{mdframed}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -13,19 +16,15 @@
 
 \begin{document}
 
-\section*{MA2 Přehled}
-\subsection*{Určitý integrál}
+\title{MA2 Přehled}
 
-\subsubsection*{Newtonova formule}
+\maketitle
+\pagebreak
 
-Funkce $f$ je spojitá na intervalu $\langle a, b \rangle$ s primitivní funkcí $F$, Pak platí: 
-
-\[ \int_a^b f(x) dx = F(b) - F(a) =:\left[ F(x) \right]_a^b \]
-
-\subsubsection*{Per partes pro určitý integrál}
-
-Funkce $f$ a $g$ jsou spojité na $\langle a, b \rangle$, $f$ má spojitou derivaci na intervalu $\langle a, b \rangle$ a $G$ je primitivní funkcí k $g$ na intervalu $\langle a, b \rangle$. Potom:
-
-\[ \int_a^b f(x)g(x) dx =  \left[ f(x)G(x) \right]_a^b - \int_a^b f'(x)G(x) dx\]
+\import{sections/}{1_neurcity_integral.tex}
+\import{sections/}{2_urcity_integral.tex}
+\import{sections/}{3_ciselne_rady.tex}
+\import{sections/}{4_taylor.tex}
+\import{sections/}{99_tabulky.tex}
 
 \end{document}
