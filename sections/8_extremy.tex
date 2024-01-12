@@ -1,0 +1,54 @@
+\section{Extrémy funkcí více proměnných}
+
+\subsection*{Definice extrému funkce více proměnných}
+
+Mějme funkci $f: D_f \to \R$, $D_f \subset \R^n$, a bod $\va \in D_f$. Funkce
+$f$ má v bodě $\va$
+
+\begin{itemize}
+    \item \textbf{ostré lokální minimum}, právě když existuje okolí $U_\va$ bodu $\va$ takové, že pro všechna $\vx \in U_\va \cap D_f$ různá od $\va$ platí $f(\vx) > f(\va)$.
+    \item \textbf{ostré lokální maximum}, právě když existuje okolí $U_\va$ bodu $\va$ takové, že pro všechna $\vx \in U_\va \cap D_f$ různá od $\va$ platí $f(\vx) < f(\va)$.
+    \item \textbf{lokální minimum}, právě když existuje okolí $U_\va$ bodu $\va$ takové, že pro všechna $\vx \in U_\va \cap D_f$ platí $f(\vx) \geq f(\va)$.
+    \item \textbf{lokální maximum}, právě když existuje okolí $U_\va$ bodu $\va$ takové, že pro všechna $\vx \in U_\va \cap D_f$ platí $f(\vx) \leq f(\va)$.
+\end{itemize}
+
+\noindent Hodnota tohoto extrému je ve všech případech rovna $f(\va)$.
+Souhrnně budeme mluvit o (ostrém) lokálním extrému.
+
+\subsection*{Nutná podmínka existence lokálního extrému I: parciální derivace}
+
+Mějme funkci $f: D_f \to \R$, $D_f \subset \R^n$, mající v bodě $\va$ lokální
+extrém (klidně ostrý) a $j \in \hat n$. Potom parciální derivace funkce $f$ v
+bodě $\va$ podle $j$-té proměnné je rovna nule nebo neexistuje.
+
+\subsection*{Nutná podmínka existence lokálního extrému I: gradient}
+
+Mějme funkci $f: D_f \to \R$, $D_f \subset \R^n$, mající v bodě $\va$ (ostrý)
+lokální extrém a mající parciální derivace v bodě $\va$ podle všech proměnných.
+Potom $\nabla f(\va) = \theta$.
+
+\subsection*{Stacionární bod}
+
+Mějme funkci $f: D_f \to \R$, $D_f \subset \R^n$. Bod $\va \in D_f$ splňující
+$\nabla f(\va) = \theta$ nazýváme \textbf{stacionárním bodem}.
+\textbf{Kritickým bodem} nazýváme bod, kde neexistuje gradient nebo je
+stacionární.
+
+\subsection*{Nutná podmínka existence lokálního extrému II}
+
+Nechť funkce $f: D_f \to \R$, $D_f \subset \R^n$, má spojité všechny druhé parciální derivace na okolí bodu $\va$ a nechť má v tomto bodě lokální minimum (resp. maximum), potom je Hessova matice $\nabla^2 f(\va)$ PSD (resp. NSD).
+
+\subsection*{Postačující podmínka existence lokálního extrému}
+
+Mějme funkci $f: D_f \to \R$, $D_f \subset \R^n$, mající spojité všechny třetí parciální derivace na okolí bodu $\va$ a nechť jsou splněny následující dvě podmínky
+
+\begin{enumerate}
+    \item $\nabla f(\va) = \theta$,
+    \item $\nabla^2 f(\va)$ je PD (resp. ND).
+\end{enumerate}
+
+\noindent Potom má funkce $f$ v bodě $\va$ ostré lokální minimum (resp. maximum).
+
+\noindent Pokud platí první podmínka a Hessova matice $\nabla^2 f(\va)$ je ID, pak tato funkce v bodě $\va$ lokální extrém nemá.
+
+\pagebreak

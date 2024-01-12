@@ -1,0 +1,54 @@
+\section{Vícerozměrná integrace}
+
+\subsection*{Množiny typu 1 a 2}
+
+O množině $D \subset \R^2$ řekneme, že
+
+\begin{itemize}
+    \item je \textbf{typu 1}, právě když existuje interval $J = \langle a, b \rangle$ a
+          dvě spojité funkce $\varphi_1$ a $\varphi_2$ definované na $J$ a splňující
+          $\varphi_1(x) \leq \varphi_2(x)$ pro všechna $x \in J$ tak, že
+          \[ D = \{ (x,y) \in \R^2 \mid x \in J \ \wedge \ \varphi_1(x) \leq y \leq \varphi_2(x) \}. \]
+    \item je \textbf{typu 2}, právě když existuje interval $J = \langle a, b \rangle$ a
+          dvě spojité funkce $\psi_1$ a $\psi_2$ definované na $J$ a splňující $\psi_1(y)
+              \leq \psi_2(y)$ pro všechna $y \in J$ tak, že
+          \[ D = \{ (x,y) \in \R^2 \mid y \in J \ \wedge \ \psi_1(y) \leq x \leq \psi_2(y) \}. \]
+\end{itemize}
+
+\subsection*{Postačující podmínka existence vícerozměrného integrálu}
+
+Nechť $D$ je hyperkvádr nebo množina typu 1 nebo 2 a $f$ spojitá funkce na $D$.
+Potom je funkce $f$ Riemannovsky integrabilní na množině $D$.
+
+\subsection*{Fubini pro hyperkvádr}
+
+Buď $f$ Riemannovsky integrabilní na obdélníku $D = \langle a_1, b_1 \rangle
+    \times \langle a_2, b_2 \rangle$. Pokud existuje jeden z integrálů
+
+\[ \int_{a_1}^{b_1} \left( \int_{a_2}^{b_2} f(x,y)\,dy \right)dx
+    \quad\text{nebo}\quad
+    \int_{a_2}^{b_2} \left( \int_{a_1}^{b_1} f(x,y)\,dx \right)dy \]
+
+\noindent potom je roven Riemannově integrálu
+
+\[ \int_D f(x,y) \,dxdy. \]
+
+\subsection*{Integrace funkcí se separovanými proměnnými}
+
+Pokud integrujeme spojitou funkci tvaru $f(x,y) = g(x) \cdot h(y)$ na obdélníku
+$D = \langle a_1, b_1 \rangle \times \langle a_2, b_2 \rangle$, pak
+
+\[ \int_D f(x,y) \,dxdy = \int_{a_1}^{b_1} g(x)\,dx \cdot \int_{a_2}^{b_2} h(y) \,dy. \]
+
+\subsection*{Fubini pro množiny typu 1 nebo 2}
+
+Buď $f$ spojitá na množině $D$ typu 1 nebo 2. Potom
+
+\begin{enumerate}
+    \item pro množinu $D$ typu 1 platí $\displaystyle \int_D f(x,y)\,dxdy = \int_a^b
+              \left( \int_{\varphi_1(x)}^{\varphi_2(x)} f(x,y)\,dy \right)dx$,
+    \item pro množinu $D$ typu 2 platí $\displaystyle \int_D f(x,y)\,dxdy = \int_a^b
+              \left( \int_{\psi_1(y)}^{\psi_2(y)} f(x,y)\,dx \right)dy$.
+\end{enumerate}
+
+\pagebreak

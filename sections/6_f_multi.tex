@@ -2,4 +2,263 @@
 
 \subsection*{Euklidovská norma a vzdálenost}
 
+\textbf{Euklidovskou normu vektoru} $\mathbf{x} \in \mathbb{R}^n$ definujeme předpisem
+
+\[ \| \mathbf{x} \| \equiv \sqrt{\sum_{j=1}^n x_j^2}\,. \]
+
+\noindent \textbf{Euklidovskou vzdálenost dvou bodů} $\mathbf{x} \in \mathbb{R}^n$ a $\mathbf{y} \in \mathbb{R}^n$ pak představuje číslo
+
+\[ d(\mathbf{x}, \mathbf{y}) \equiv \|\mathbf{x} - \mathbf{y}\| = \sqrt{\sum_{j=1}^n (x_j - y_j)^2}\,. \]
+
+\subsection*{Okolí bodu $\mathbf{a} \in \mathbb{R}^n$}
+
+Mějme bod $\mathbf{a} \in \mathbb{R}^n$ a poloměr $\epsilon > 0$. Potom
+\textbf{okolím bodu $\mathbf{a}$ o poloměru $\epsilon$} nazýváme množinu všech
+bodů $\mathbf{x} \in \mathbb{R}^n$, jejichž vzdálenost od bodu $\mathbf{a}$ je
+menší než $\epsilon$ a značíme ho $U_\mathbf{a}(\epsilon)$. Tj. podrobně
+rozepsáno
+
+\[ U_\mathbf{a}(\epsilon) \equiv \big\{ \mathbf{x} \in \mathbb{R}^n \,\big|\, d(\mathbf{x}, \mathbf{a}) < \epsilon \big\} \subset \mathbb{R}^n. \]
+
+\subsection*{Hromadný bod množiny $M \subset \mathbb{R}^n$}
+
+Bod $\mathbf{a} \in \mathbb{R}^n$ nazýváme \textbf{hromadným bodem množiny $M
+        \subset \mathbb{R}^n$}, právě když v každém okolí bodu $\mathbf{a}$ leží bod
+množiny $M$ různý od $\mathbf{a}$.
+
+\subsection*{Vnitřní bod množiny}
+
+O bodu $\mathbf{a} \in M \subset \mathbb{R}^n$ řekneme, že je \textbf{vnitřním
+    bodem množiny $M$}, právě když existuje okolí $U_{\mathbf{a}}$ bodu
+$\mathbf{a}$ takové, že $U_{\mathbf{a}} \subset M$.
+
+\subsection*{Otevřená množina}
+
+O množině $M \subset \mathbb{R}^n$ řekneme, že je \textbf{otevřená}, právě když
+pro každý bod $\mathbf{a} \in M$ existuje okolí $U_{\mathbf{a}}$ bodu
+$\mathbf{a}$ takové, že $U_{\mathbf{a}} \subset M$.
+
+\subsection*{Limita vektorové posloupnosti}
+
+Řekneme, že posloupnost $(\mathbf{x}_k)_{k=1}^\infty$ vektorů $\mathbf{x}_k \in \mathbb{R}^n$ má \textbf{limitu} (případně \textbf{konverguje k}) $\mathbf{a} \in \mathbb{R}^n$, právě když pro každé okolí $U_\mathbf{a}$ bodu $\mathbf{a}$ existuje $N \in \mathbb{N}$ takové, že pro každé přirozené $k > N$ platí $\mathbf{x}_k \in U_\mathbf{a}$.
+Tento fakt značíme $\lim\limits_{k\to\infty} \mathbf{x}_k = \mathbf{a}$.
+
+\subsection*{Konvergence a vzdálenost}
+
+Pro vektorovou posloupnost $(\mathbf{x}_k)_{k=1}^\infty$ platí
+$\lim\limits_{k\to \infty} \mathbf{x}_k = \mathbf{a}$, právě když
+$\lim\limits_{k \to \infty} \| \mathbf{x}_k - \mathbf{a} \| = 0$ (tato druhá
+limita je obyčejná limita z BI-MA1).
+
+\subsection*{Konvergence po složkách}
+
+Uvažme posloupnost $(\mathbf{x}_k)_{k=1}^\infty$. Potom platí následující
+ekvivalence: $\lim\limits_{k\to\infty} \mathbf{x}_k = \mathbf{a}$, právě když
+pro každé $j\in\hat n$ platí $\lim\limits_{k \to \infty} (\mathbf{x}_k)_j =
+    \mathbf{a}_j$.
+
+\subsection*{Limita součtu a skalárního násobku posloupností}
+
+Mějme dvě vektorové posloupnosti $(\mathbf{x}_k)_{k=1}^\infty$ a
+$(\mathbf{y}_k)_{k=1}^\infty$ splňující $\lim\limits_{k\to\infty} \mathbf{x}_k
+    = \mathbf{a}$ a $\lim\limits_{k\to\infty} \mathbf{y}_k = \mathbf{b}$ a $\alpha
+    \in \mathbb{R}$. Potom
+
+\begin{align}
+    \lim_{k\to\infty} \big( \mathbf{x}_k + \mathbf{y}_k \big) & = \mathbf{a} + \mathbf{b}, \\
+    \lim_{k\to\infty} \big( \alpha \mathbf{x}_k \big)         & = \alpha \mathbf{a}.
+\end{align}
+
+\subsection*{Limita (vektorové) funkce více proměnných}
+
+Mějme funkci $n$ reálných proměnných $F: D_F \to \mathbb{R}^m$, $D_F \subset
+    \mathbb{R}^n$, a hromadný bod $\mathbf{a}$ množiny $D_F$.
+
+\noindent Potom \textbf{funkce $F$ má v bodě $\mathbf{a}$ limitu $\mathbf{b}\in\mathbf{R}^m$}, právě když pro každé okolí $U_\mathbf{b}$ bodu $\mathbf{b}$ existuje okolí $U_\mathbf{a}$ bodu $\mathbf{a}$ takové, že kdykoliv $\mathbf{x} \in (U_\mathbf{a} \cap D_F) \smallsetminus \{\mathbf{a}\}$ pak platí $F(\mathbf{x}) \in U_\mathbf{b}$.
+
+\noindent Symbolicky tuto situaci zapisujeme opět jako
+
+\[ \lim_{\mathbf{x} \to \mathbf{a}} F(\mathbf{x}) = \mathbf{b}. \]
+
+\noindent Pokud $m = 1$, pak ještě pro $\alpha \in \{+\infty, -\infty\}$ klademe $\displaystyle\lim_{\mathbf{x} \to \mathbf{a}} F(\mathbf{x}) = \alpha$ kdykoliv
+
+\[ (\forall U_{\alpha})(\exists U_\mathbf{a})(\forall \mathbf{x} \in \mathbb{R}^n)(x \in (U_\mathbf{a} \cap D_F) \smallsetminus \{\mathbf{a}\} \Rightarrow F(\mathbf{x}) \in U_{\alpha}). \]
+
+\subsection*{Limita zúžení}
+
+Mějme vektorovou funkci $F: D_F \to \mathbb{R}^m$, $D_F \subset \mathbb{R}^n$ a
+hromadný bod $\mathbf{a}$ definičního oboru funkce $F$ v němž existuje limita
+
+\[ \lim_{\mathbf{x} \to \mathbf{a}} F(\mathbf{x}) = \mathbf{b} \in \mathbb{R}^m. \]
+
+\noindent Potom i pro $F|_M$ zúžení funkce $F$ na množinu $M$, která má $\mathbf{a}$ jako hromadný bod, platí
+
+\[ \lim_{\mathbf{x} \to \mathbf{a}} (F|_M)(\mathbf{x}) = \mathbf{b} \in \mathbb{R}^m. \]
+
+\subsection*{Limita vektorové funkce a limity jejích složek}
+
+Mějme (vektorovou) funkci $F: D_F \to \R^m$, $D_F \subset \R^n$, hromadný bod
+$\va \in \R^n$ množiny $D_F$ a bod $\vb \in \R^m$. Potom platí
+\begin{itemize}
+    \item $\displaystyle\lim_{\vx \to \va} F(\vx) = \vb$, právě když $\displaystyle \lim_{\vx \to \va} \| F(\vx) - \vb \| = 0$.
+    \item Označme složky $F$ jako
+
+          \[ F(\vx) = \big(F_1(\vx), \cdots, F_m(\vx)\big)^T, \quad x \in D_F. \]
+
+          Pak $\lim\limits_{\vx \to \va} F(\vx) = \vb$, právě když
+          $\lim\limits_{\vx\to\va} F_j(\vx) = b_j$ pro každé $j \in \hat{m}$.
+\end{itemize}
+
+\subsection*{Věta o limitě součtu, násobku}
+
+Mějme dvě vektorové funkce $F: D_F \to \R^m$, $D_F \subset \R^n$, $G: D_G \to
+    \R^m$, $D_G \subset \R^n$, bod $\va \in \R^n$, který je hromadným bodem množiny
+$D_F \cap D_G$ a $\alpha \in \R$. Potom pokud existují limity
+$\displaystyle\lim_{\vx\to\va} F(\vx) = \vb \in \R^m$ a
+$\displaystyle\lim_{\vx\to\va} G(\vx) = \vc \in \R^m$, potom platí
+
+\[ \lim_{\vx\to\va} \big( F(\vx) + G(\vx) \big) = \vb + \vc
+    \quad \text{a} \quad
+    \lim_{\vx\to\va} \alpha F(\vx) = \alpha \vb. \]
+
+\subsection*{Věta o limitě součinu a podílu}
+
+Mějme dvě funkce $f: D_f \to \R$, $D_f \subset \R^n$, $g: D_g \to \R$, $D_g
+    \subset \R^n$, bod $\va \in \R^n$, který je hromadným bodem množiny $D_f \cap
+    D_g$. Potom pokud existují limity $\displaystyle\lim_{\vx\to\va} f(\vx) = b \in
+    \R$ a $\displaystyle\lim_{\vx\to\va} g(\vx) = c \in \R$, potom platí
+
+\[ \lim_{\vx\to\va} f(\vx) \cdot g(\vx) = b \cdot c
+    \quad \text{a} \quad
+    \lim_{\vx\to\va} \frac{f(\vx)}{g(\vx)} = \frac{b}{c}, \ \text{pokud} \ c \neq 0. \]
+
+\subsection*{Spojitost (vektorové) funkce}
+
+Mějme (vektorovou) funkci $F: A \to \R^m$, $A \subset\R^n$, a bod $\va \in
+    D_F$, který je hromadným bodem množiny $D_F$.
+
+\textbf{Funkce $F$ je spojitá v bodě $\va$}, právě když
+
+\[ \lim_{\vx \to \va} F(\vx) = F(\va). \]
+
+\noindent Funkci $F$ nazveme \textbf{spojitou} (resp. spojitou na množině $M$), právě když je spojitá v každém bodě svého definičního oboru (resp. v každém bodě množiny $M$).
+
+\subsection*{Spojitost součtu, násobku, součinu a podílu}
+
+Mějme dvě vektorové funkce $F: D_F \to \R^m$, $D_F \subset \R^n$, $G: D_G \to
+    \R^m$, $D_G \subset \R^n$, bod $\va \in \R^n$, který je hromadným bodem množiny
+$D_F \cap D_G$ a $\alpha \in \R$. Předpokládejme, že $F$ i $G$ jsou spojité v
+bodě $\va$. Potom
+
+\begin{itemize}
+    \item $F + G$ je spojitá v $\va$,
+    \item $\alpha F$ je spojitá v $\va$.
+\end{itemize}
+
+\noindent Pokud je $m = 1$, pak
+
+\begin{itemize}
+    \item $F \cdot G$ je spojitá v $\va$,
+    \item $\frac{F}{G}$ je spojitá v $\va$ v případě kdy $G(\va) \neq 0$.
+\end{itemize}
+
+\subsection*{$D_f$ v $k$-tém faktoru}
+
+Buďte $f: D_f \to \R$, $D_f \subset \R$, reálná funkce jedné reálné proměnné,
+$n \in \N$ a $k \in \hat{n}$. Definujme funkci ($D_f$ v $k$-tém faktoru)
+
+\[ g(\vx) \equiv f(x_k), \ \text{pro} \ \vx \in D_g \equiv
+    \underbrace{\R \times \cdots \times \R}_{k-1} \times D_f \times \underbrace{\R \times \cdots \times \R}_{n-k}. \]
+
+Je-li $f$ spojitá, pak i $g$ je spojitá.
+
+\subsection*{Věta o spojitosti složené (vektorové) funkce}
+
+Mějme (vektorové) funkce $g: D_g \to \R^m$, $D_g \subset \R^n$ a $f: D_f \to
+    \R^k$, $D_f \subset \R^m$. Dále předpokládejme, že $g$ je spojitá v $\va \in
+    D_g$ a $f$ je spojitá a definovaná na okolí $g(\va)$. Potom je $f \circ g$
+spojitá v bodě $\va$.
+
+\subsection*{Parciální derivace (v bodě)}
+
+Mějme reálnou funkci $n$ reálných proměnných $f: D_f \to \R$, $D_f \subset
+    \R^n$, definovanou na okolí bodu $\va \in D_f$ a $j \in \hat n$.
+
+Existuje-li limita
+
+\[ \lim_{h \to 0} \frac{f(\va + h \ve_j) - f(\va)}{h}, \]
+
+pak její hodnotu nazýváme \textbf{parciální derivací funkce $f$ v bodě $\va$
+    podle $j$-té proměnné} a značíme ji $\frac{\partial f}{\partial x_j}(\va)$, případně $\partial_{x_j} f(\va)$.
+
+Označme $M$ jako množinu všech vnitřních bodů $\va$ množiny $D_f$, v kterých
+existuje limita (předchozí limita). Potom funkci přiřazující hodnotu $\frac{\partial{f}}{\partial x_j}(\va)$ každému $\va \in M\subset\R^n$ nazýváme \textbf{parciální
+    derivací funkce $f$ podle $j$-té proměnné} a značíme ji
+
+\[ \frac{\partial f}{\partial x_j}, \quad \text{případně} \quad \partial_{x_j} f. \]
+
+\subsection*{Gradient}
+
+Mějme reálnou funkci $n$ reálných proměnných $f: D_f \to \R$, $D_f \subset
+    \R^n$ mající všechny parciální derivace v bodě $\va \in D_f$. Potom řádkový
+vektor
+
+\[ \left( \frac{\partial f}{\partial x_1}(\va), \frac{\partial f}{\partial x_2}(\va), \ldots, \frac{\partial f}{\partial x_n}(\va) \right) \in \R^{1,n} \]
+
+\noindent nazýváme \textbf{gradientem funkce $f$ v bodě $\va$} a používáme pro něj značení
+
+\[ \nabla f(\va) \quad \text{nebo} \quad \mathrm{grad} f(\va). \]
+
+\subsection*{Derivace (vektorové) funkce}
+
+Mějme zobrazení $F: D_F \to \R^m$, $D_F \subset \R^n$, definované na okolí bodu
+$\va$.
+
+Derivací zobrazení $F$ v bodě $\va$ nazýváme matici $DF(\va) \in \R^{m,n}$
+splňující
+
+\[ \lim_{\vx \to \va} \frac{\|F(\vx) - F(\va) - DF(\va) \cdot (\vx - \va) \|}{\|\vx - \va\|} = 0. \]
+
+\subsection*{Složky matice $DF(\va)$ a její jednoznačnost}
+
+Pokud má zobrazení $F: D_f \to \R^m$, $D_f \subset \R^n$, definované na okolí
+bodu $\va$, derivaci $DF(\va) \in \R^{m,n}$ v bodě $\va$, potom
+
+\[ DF(\va) = \begin{pmatrix}
+        \frac{\partial F_1}{\partial x_1}(\va) & \frac{\partial F_1}{\partial x_2}(\va) & \cdots & \frac{\partial F_1}{\partial x_n}(\va) \\ \frac{\partial F_2}{\partial x_1}(\va) & \frac{\partial F_2}{\partial x_2}(\va) & \cdots & \frac{\partial F_2}{\partial x_n}(\va) \\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial F_m}{\partial x_1}(\va) & \frac{\partial F_m}{\partial x_2}(\va) & \cdots & \frac{\partial F_m}{\partial x_n}(\va)
+    \end{pmatrix}. \]
+
+\noindent Odtud ihned také plyne, že je tato matice dána jednoznačně, existuje-li.
+
+\subsection*{Hessova matice}
+
+Na derivaci, resp. gradient, funkce $f: D_f \to \R$, $D_f \subset \R^n$, lze
+nahlížet jako na zobrazení $Df: A \to \R^n$, $A \subset D_f$, jeho derivací v
+bodě $\va \in A$ je pak matice typu $\R^{n,n}$, kterou nazýváme
+\textbf{Hessovou maticí} a značíme $\nabla^2 f(\va)$. Pokud existuje, pak platí
+
+\[ \nabla^2 f(\va) = \begin{pmatrix}
+        \frac{\partial^2 f}{\partial x_1^2}(\va) & \frac{\partial^2 f}{\partial x_2 \partial x_1}(\va) & \cdots & \frac{\partial^2 f}{\partial x_n \partial x_1}(\va) \\ \frac{\partial^2 f}{\partial x_1 \partial x_2}(\va) & \frac{\partial^2 f}{\partial x_2^2}(\va) & \cdots & \frac{\partial^2 f}{\partial x_n \partial x_2}(\va) \\ \vdots & \vdots & \cdots & \vdots \\ \frac{\partial^2 f}{\partial x_1 \partial x_n}(\va) & \frac{\partial^2 f}{\partial x_2 \partial x_n}(\va) & \cdots & \frac{\partial^2 f}{\partial x_n^2}(\va)
+    \end{pmatrix}. \]
+
+\subsection*{Derivace složené funkce}
+
+Mějme zobrazení $F: D_F \to \R^k$, $D_F \subset \R^m$ a $G: D_G \to \R^m$, $D_G
+    \subset \R^n$ a bod $\va \in D_G$ takové, že existují $DG(\va)$ a $D F\big(
+    G(\va) \big)$. Potom existuje i derivace složeného zobrazení $F \circ G$ v bodě
+$\va$ a platí
+
+\[ D\big( F \circ G \big)(\va) = DF\big(G(\va)\big) \cdot DG(\va). \]
+
+\subsection*{Derivace ve směru}
+
+Nechť $f: D_f \to \R$, $D_f \subset \R^n$ má derivaci v bodě $\va \in D_f$. Buď
+$\vv$ vektor délky $1$.
+
+\noindent Potom existuje limita (tzv. \textbf{derivace funkce $f$ ve směru $\vv$ v bodě $\va$})
+
+\[ \frac{\partial f}{\partial \vv}(\va) \equiv \partial_{\vv} f(\va) \equiv \lim_{h \to 0} \frac{f(\va + h\vv) - f(\va)}{h} \]
+
+\noindent a je rovna $\langle \nabla f(\va)^T \mid \vv \rangle$.
+
 \pagebreak

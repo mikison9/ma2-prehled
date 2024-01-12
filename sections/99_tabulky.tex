@@ -23,3 +23,90 @@
     \end{tabular}
 
 \end{minipage}
+
+\vspace{1em}
+
+\noindent\begin{minipage}{\linewidth}
+    \subsection*{Důležité limity posloupností }
+
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Limita}                                                  & \textbf{Výsledek}                                                             & \textbf{Podmínka}    \\
+        \hline
+        $\displaystyle\lim_{n\to\infty} c$                               & $c$                                                                           & $c \in \mathbb{R}$   \\
+        $\displaystyle\lim_{n\to\infty} n^a$                             & $\begin{cases} +\infty & a > 0, \\ 1 & a = 0, \\ 0, & a < 0. \end{cases}$ & $a \in \mathbb{R}$   \\
+        $\displaystyle\lim_{n\to\infty} \sum_{k=1}^n \frac{1}{k}$        & $+\infty$                                                                     &                      \\
+        $\displaystyle\lim_{n\to\infty} \sqrt[n]{n}$                     & $1$                                                                           &                      \\
+        $\displaystyle\lim_{n\to\infty} \sqrt[n]{c}$                     & $1$                                                                           & $c \in (0, +\infty)$ \\
+        $\displaystyle\lim_{n\to\infty} \sqrt[n]{n!}$                    & $+\infty$                                                                     &                      \\
+        $\displaystyle\lim_{n\to\infty} a^n$                             & $\begin{cases} 0, & |a| < 1, \\ 1, & a = 1, \\ +\infty, & a > 1, \\ \text{neexistuje}, & a \leq -1. \end{cases}$   & $a\in\mathbb{R}$     \\
+        $\displaystyle\lim_{n\to\infty} \left(1 + \frac{1}{n} \right)^n$ & $\mathrm{e}$                                                                  &                      \\
+        \hline
+    \end{tabular}
+
+\end{minipage}
+
+\vspace{1em}
+
+\noindent\begin{minipage}{\linewidth}
+    \subsection*{Důležité limity}
+
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Limita}                                                        & \textbf{Hodnota}                                                                        & \textbf{Podmínky}                                                   \\
+        \hline
+        $\displaystyle\lim_{x\to a} c$                                        & $c$                                                                                    & $c \in \mathbb{R}$, $a \in \overline{\mathbb{R}}$                     \\
+        $\displaystyle\lim_{x\to a} x$                                        & $a$                                                                                    & $a \in \overline{\mathbb{R}}$                                         \\
+        $\displaystyle\lim_{x\to a\pm} \frac{1}{(x-a)^k}$                     & $\begin{cases} \pm\infty, & k \ \text{lichá}, \\ +\infty, & k \ \text{sudá}.\end{cases}$ & $a \in \mathbb{R}$, $k \in \mathbb{N}$                                \\
+        $\displaystyle\lim_{x\to a} |x|$                                      & $|a|$                                                                                  & $a \in \overline{\mathbb{R}}$                                         \\
+        $\displaystyle\lim_{x\to0\pm} \operatorname{sgn}(x)$                  & $\pm 1$                                                                                &                                                                       \\
+        $\displaystyle\lim_{x\to a} \sqrt[k]{x}$                              & $\sqrt[k]{a}$                                                                          & lichá $k \in \mathbb{N}$, $a \in \overline{\mathbb{R}}$                 \\
+        $\displaystyle\lim_{x\to a} \sqrt[k]{x}$                              & $\sqrt[k]{a}$                                                                          & sudá $k \in \mathbb{N}$, $a \in \langle 0, +\infty) \cup \{+\infty\}$ \\
+        $\displaystyle\lim_{x\to a} P(x)$                                     & $P(a)$                                                                                 & $a \in \mathbb{R}$, polynom $P$                                    \\
+        $\displaystyle\lim_{x\to0} \frac{e^x - 1}{x}$                         & $1$                                                                                    &                                                                       \\
+        $\displaystyle\lim_{x\to0} \frac{\ln(1+x)}{x}$                        & $1$                                                                                    &                                                                       \\
+        $\displaystyle\lim_{x\to0} \frac{\sin(x)}{x}$                         & $1$                                                                                    &                                                                       \\
+        $\displaystyle\lim_{x\to a} \sin(x)$                                  & $\sin(a)$                                                                              & $a \in \mathbb{R}$                                                    \\
+        $\displaystyle\lim_{x\to a} \cos(x)$                                  & $\cos(a)$                                                                              & $a \in \mathbb{R}$                                                    \\
+        $\displaystyle\lim_{x\to a} \mathrm{e}^x$                             & $\mathrm{e}^a$                                                                         & $a \in \mathbb{R}$                                                    \\
+        $\displaystyle\lim_{x\to +\infty} \mathrm{e}^x$                       & $+\infty$                                                                              &                                                                       \\
+        $\displaystyle\lim_{x\to -\infty} \mathrm{e}^x$                       & $0$                                                                                    &                                                                       \\
+        $\displaystyle\lim_{x\to a} \ln(x)$                                   & $\ln(a)$                                                                               & $a \in (0, +\infty)$                                                  \\
+        $\displaystyle\lim_{x\to +\infty} \ln(x)$                             & $+\infty$                                                                              &                                                                       \\
+        $\displaystyle\lim_{x\to0+} \ln(x)$                                   & $-\infty$                                                                              &                                                                       \\
+        $\displaystyle\lim_{x\to\pm\infty} \left(1 + \frac{1}{x}\right)^x$    & $\mathrm{e}$                                                                           &                                                                       \\
+        $\displaystyle\lim_{x\to\pm\infty} \left(1+\frac{\alpha}{x}\right)^x$ & $\mathrm{e}^\alpha$                                                                    & $\alpha \in \mathbb{R}$                                               \\
+        \hline
+    \end{tabular}
+
+\end{minipage}
+
+\vspace{1em}
+
+\noindent\begin{minipage}{\linewidth}
+    \subsection*{Derivace elementárních funkcí}
+
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{\( f(x) \)}            & \textbf{\( f'(x) \)}          & \textbf{Podmínky}                                             \\
+        \hline
+        \( x^n \)                      & \( nx^{n-1} \)                & \( x\in\mathbb{R} \), \( n \in\mathbb{N}_0 \)                   \\
+        \( x^n \)                      & \( nx^{n-1} \)                & \( x\in\mathbb{R}\smallsetminus\{0\} \), \( n = -1,-2,\ldots \) \\
+        \( e^x \)                      & \( e^x \)                     & \( x\in\mathbb{R} \)                                            \\
+        \( a^x \)                      & \( a^x\ln a \)                & \( x\in\mathbb{R} \), \( a>0 \)                                 \\
+        \( \ln(x) \)                   & \( \frac{1}{x} \)             & \( x>0 \)                                                       \\
+        \( \sin(x) \)                  & \( \cos(x) \)                 & \( x\in\mathbb{R} \)                                            \\
+        \( \cos(x) \)                  & \( -\sin(x) \)                & \( x\in\mathbb{R} \)                                            \\
+        \( \tan(x) \)                  & \( \frac{1}{\cos^2(x)} \)     & \( x\neq \frac{\pi}{2} + k\pi, \ k\in\mathbb{Z} \)              \\
+        \( \cot(x) \)                  & \( -\frac{1}{\sin^2(x)} \)    & \( x\neq k\pi, \ k\in\mathbb{Z} \)                              \\
+        \( \arcsin(x) \)               & \( \frac{1}{\sqrt{1-x^2}} \)  & \( x\in(-1,1) \)                                                \\
+        \( \arccos(x) \)               & \( -\frac{1}{\sqrt{1-x^2}} \) & \( x\in(-1,1) \)                                                \\
+        \( \arctan(x) \)               & \( \frac{1}{1+x^2} \)         & \( x\in\mathbb{R} \)                                            \\
+        \( \operatorname{arccot}(x) \) & \( -\frac{1}{1+x^2} \)        & \( x\in\mathbb{R} \)                                            \\
+        \hline
+    \end{tabular}
+
+\end{minipage}

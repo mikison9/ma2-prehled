@@ -1,0 +1,89 @@
+\section{Kvadratické formy}
+
+\subsection*{Kvadratická forma}
+
+Funkci $q: \R^n \to \R$ nazýváme \textbf{kvadratickou formou}, právě když
+existuje symetrická matice $\mM \in \R^{n,n}$ splňující
+
+\[ q(\vx) = \sum_{j,k=1}^n \mM_{j,k} x_j x_k, \quad \text{pro každé} \ \vx = (x_1,\ldots,x_n)^T \in \R^n. \]
+
+\subsection*{Typy definitnosti kvadratických forem}
+
+Kvadratickou formu $q: \R^n \to \R$ nazveme
+
+\begin{itemize}
+    \item \textbf{pozitivně definitní} (PD), právě když $q(\vx) > 0$ pro každé nenulové $\vx \in \R^n$.
+    \item \textbf{pozitivně semidefinitní} (PSD), právě když $q(\vx) \geq 0$ pro každé $\vx\in\R^n$.
+    \item \textbf{indefinitní} (ID), právě když existují vektory $\vx,\vy\in\R^n$ splňující $q(\vx) > 0$ a $q(\vy) < 0$.
+    \item \textbf{negativně semidefinitní} (NSD), právě když $q(\vx) \leq 0$ pro každé $\vx\in\R^n$.
+    \item \textbf{negativně definitní} (ND), právě když $q(\vx) < 0$ pro každé nenulové $\vx \in \R^n$.
+\end{itemize}
+
+\noindent Stejnou terminologii budeme používat i pro symetrické matice $\mM$: symetrická
+matice $\mM$ je typu $T$, právě když forma $\vx^T \mM \vx$ je typu $T$.
+
+\subsection*{Diagonalizace symetrické reálné matice}
+
+Symetrická reálná matice je diagonalizovatelná a všechna její vlastní čísla
+jsou reálná. Vlastní vektory příslušející různým vlastním číslům jsou vzájemně
+ortogonální.
+
+\subsection*{Vztah definitností a vlastních čísel}
+
+Kvadratická forma $q(\vx) = \vx^T \mM \vx$ je
+
+\begin{itemize}
+    \item PD, právě když všechna vlastní čísla matice $\mM$ jsou kladná.
+    \item PSD, právě když všechna vlastní čísla matice $\mM$ jsou nezáporná.
+    \item ID, právě když má matice $\mM$ kladné i záporné vlastní číslo.
+    \item NSD, právě když všechna vlastní čísla matice $\mM$ jsou nekladná.
+    \item ND, právě když všechna vlastní čísla matice $\mM$ jsou záporná.
+\end{itemize}
+
+\subsection*{Typy definitností a úprava na čtverce}
+
+Předpokládejme, že předchozí postup úspěšně proběhl a máme tedy $q(\vx)$,
+$\vx\in\R^n$, vyjádřeno ve tvaru
+
+\[ q(\vx) = \sum_{j=1}^k \alpha_j \big( (\mP \vx)_j  \big)^2, \]
+
+\noindent kde $1 \leq k \leq n$, $\mP \in \R^{k, n}$ má hodnost $k$ (plyne z postupné eliminace proměnných) a $\alpha_j \neq 0$, $j\in\hat{k}$.
+
+\noindent Potom platí:
+
+\begin{itemize}
+    \item Pokud $k = n$ a $\alpha_j > 0$ pro všechna $j \in \hat{k}$, potom je $q$ PD.
+    \item Pokud $k = n$ a $\alpha_j < 0$ pro všechna $j \in \hat{k}$, potom je $q$ ND.
+    \item Pokud $k < n$ a $\alpha_j > 0$ pro všechna $j \in \hat{k}$, potom je $q$ PSD
+          (ale ne PD).
+    \item Pokud $k < n$ a $\alpha_j < 0$ pro všechna $j \in \hat{k}$, potom je $q$ NSD
+          (ale ne ND).
+    \item Pokud existují $j,\ell \in \hat{k}$ taková, že $\alpha_j > 0$ a $\alpha_\ell <
+              0$, potom je $q$ ID.
+\end{itemize}
+
+\subsection*{Sylvesterovo kritérium}
+
+Kvadratická forma $q(\vx) = \vx^T \mM \vx$, kde $\mM \in \R^{n,n}$ je
+symetrická matice, je
+
+\begin{itemize}
+    \item PD, právě když pro každé $k \in \hat n$ platí $\det \mM_k > 0$.
+    \item ND, právě když pro každé $k \in \hat n$ platí $(-1)^k \det \mM_k > 0$.
+\end{itemize}
+
+\subsection*{Obecné Sylvestrovo kritérium}
+
+Nechť $\mM \in \R^{n,n}$ je symetrická matice.
+  Potom
+
+\begin{enumerate}
+    \item $\mM$ je PD, právě když $\det \mM_{\{k+1,\ldots,n\}} > 0$ pro každé přirozené $k$ splňující $0 < k \leq n$,
+    \item $\mM$ je ND, právě když $(-1)^k \det \mM_{\{k+1,\ldots,n\}} > 0$ pro každé přirozené $k$ splňující $0 < k \leq n$,
+    \item $\mM$ je PSD, právě když $\det \mM_I \geq 0$ pro všechna $I \subsetneq \hat n$.
+    \item $\mM$ je NSD, právě když $(-1)^{n - \# I}\det \mM_I \geq 0$ pro všechna $I \subsetneq \hat n$.
+    \item $\mM$ je ID, právě když $\det \mM_I < 0$ pro nějaké $I \subsetneq \hat n$, kde $n - \# I$ je sudé, nebo $\det \mM_I < 0$ a $\det \mM_J > 0$ pro nějaké $I,J \subsetneq \hat n$, kde $n - \# I$ a $n - \# J$ jsou lichá.
+\end{enumerate}
+
+
+\pagebreak
