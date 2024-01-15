@@ -1,0 +1,66 @@
+\section{Asymptotika}
+
+\subsection*{Asymptotické horní meze $o$ a $\mathcal{O}$}
+
+\begin{align*}
+    a_n & = \mathcal{O}(b_n) &  & \stackrel{\text{def}}{\Leftrightarrow} &  & (\exists c > 0)(\exists N \in \N)(\forall n \in \N)\big(n > N \Rightarrow |a_n| \leq c |b_n|\big), \\
+    a_n & = o(b_n)           &  & \stackrel{\text{def}}{\Leftrightarrow} &  & (\forall c > 0)(\exists N \in \N)(\forall n \in \N)\big(n > N \Rightarrow |a_n| < c |b_n|\big).
+\end{align*}
+
+\subsection*{Dolní asymptotická mez $\Omega$}
+
+Mějme dvě posloupnosti $(a_n)_{n=1}^\infty$ a $(b_n)_{n=1}^\infty$. Řekneme, že
+\textbf{posloupnost $(a_n)_{n=1}^\infty$ je asymptoticky zdola omezená
+    posloupností $(b_n)_{n=1}^\infty$}, symbolicky $a_n = \Omega(b_n)$ pro $n \to
+    \infty$, právě když existuje kladná konstanta $c \in \R$ a přirozené $N \in \N$
+tak, že pro všechna $n \geq N$ platí
+
+\[ |a_n| \geq c \cdot |b_n|. \]
+
+\noindent Vlastnosti:
+
+\begin{itemize}
+    \item $a_n = \Omega(b_n)$, právě když $b_n = \mathcal{O}(a_n)$.
+    \item $a_n = \Omega(a_n)$.
+    \item Vztah $\Omega$ je tranzitivní.
+\end{itemize}
+
+\subsection*{Dolní striktní asymptotická mez $\omega$}
+
+Mějme dvě posloupnosti $(a_n)_{n=1}^\infty$ a $(b_n)_{n=1}^\infty$. Řekneme, že
+\textbf{posloupnost $(a_n)_{n=1}^\infty$ je asymptoticky zdola striktně omezená
+    posloupností $(b_n)_{n=1}^\infty$}, symbolicky $a_n = \omega(b_n)$ pro $n \to
+    \infty$, právě když pro každé kladné $c \in \R$ existuje $N \in \N$ tak, že pro
+všechna $n \geq N$ platí
+
+\[ |a_n| > c \cdot |b_n|. \]
+
+\noindent Vlastnosti:
+
+\begin{itemize}
+    \item  $a_n = \omega(b_n)$, právě když $b_n = o(a_n)$.
+    \item Pokud $a_n = \omega(b_n)$, pak $a_n = \Omega(b_n)$.
+    \item $\omega$ je tranzitivní.
+\end{itemize}
+
+\subsection*{Asymptotická těsná mez $\Theta$}
+
+Mějme dvě posloupnosti $(a_n)_{n=1}^\infty$ a $(b_n)_{n=1}^\infty$. Řekneme, že
+\textbf{posloupnost $(a_n)_{n=1}^\infty$ je téhož řádu jako posloupnost
+    $(b_n)_{n=1}^\infty$}, symbolicky $a_n = \Theta(b_n)$ pro $n \to \infty$, právě
+když existují kladné konstanty $c_1,c_2 \in \R$ a $N \in \N$ tak, že pro
+všechna $n \geq N$ platí
+
+\[ c_1 |b_n| \leq |a_n| \leq c_2 |b_n|. \]
+
+\noindent Vlastnosti:
+
+\begin{itemize}
+    \item $a_n = \Theta(b_n)$, právě když $b_n = \Theta(a_n)$.
+    \item Vztah $\Theta$ kombinuje $\mathcal{O}$ a $\Omega$ v následujícím smyslu: $a_n =
+              \Theta(b_n)$, právě když $a_n = \Omega(b_n)$ a $a_n = \mathcal{O}(b_n)$.
+    \item $\Theta$ je tranzitivní.
+\end{itemize}
+
+\pagebreak
+
