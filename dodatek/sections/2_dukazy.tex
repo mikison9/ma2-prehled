@@ -1,0 +1,15 @@
+\section{Důkazy}
+
+\subsection*{Důkaz věty o poloměru konvergence}
+
+Pro libovolné $x\in\R$ různé od $c$ dostáváme
+
+\[ \lim_{k\to\infty} \bigg| \frac{a_{k+1} (x-c)^{k+1}}{a_k (x-c)^k} \bigg| = \lim_{k\to\infty} |x - c| \cdot \bigg| \frac{a_{k+1}}{a_k} \bigg| = |x - c| \cdot L. \]
+
+\noindent Shrnujeme, že pokud
+\begin{itemize}
+    \item $|x - c| \cdot L < 1$, tedy $|x - c| < R$, pak podle d'Alembertova kritéria zkoumaná řada konverguje absolutně,
+    \item $|x - c| \cdot L > 1$, tedy $|x - c| > R$, pak podle podílového kritéria je $\displaystyle\lim_{k\to\infty} |a_k (x-c)^k| = +\infty$. Tudíž nemůže být splněna nutná podmínka konvergence zkoumané řady (tj. neplatí $\displaystyle\lim_{k\to\infty} a_k (x-c)^k = 0$).
+\end{itemize}
+
+\pagebreak
