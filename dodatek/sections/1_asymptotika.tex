@@ -62,5 +62,22 @@ všechna $n \geq N$ platí
     \item $\Theta$ je tranzitivní.
 \end{itemize}
 
+\subsection*{Limity a asymptotické vztahy ($\sim$, $o$, $\mathcal{O}$, $\Omega$, $\Theta$ a $\omega$)}
+
+\begin{itemize}
+    \item Pokud limita $\displaystyle \lim_{x\to a} \left| \frac{f(x)}{g(x)} \right| \in
+              \R$, pak $f(x) = \mathcal{O}(g(x))$ pro $x \to a$.
+    \item Platí $\displaystyle \lim_{x\to a} \left| \frac{f(x)}{g(x)} \right| = 0$, právě
+          když $f(x) = o(g(x))$ pro $x \to a$.
+    \item Platí $\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)} = 1$, právě když $f(x) \sim
+              g(x)$ pro $x \to a$.
+    \item Pokud $\displaystyle \lim_{n\to\infty} \left|\frac{a_n}{b_n}\right| > 0$, potom
+          $a_n = \Omega(b_n)$.
+    \item Pokud $\displaystyle \lim_{n\to\infty} \left|\frac{a_n}{b_n}\right| = +\infty$,
+          potom $a_n = \omega(b_n)$.
+    \item Pokud $\displaystyle \lim_{n\to\infty} \left|\frac{a_n}{b_n}\right| \in (0,
+              +\infty)$, potom $a_n = \Theta(b_n)$.
+\end{itemize}
+
 \pagebreak
 
