@@ -23,4 +23,56 @@ Pro každé $\vx,\vy\in\R^n$ platí
 
 \[ \|\vx + \vy\| \leq \|\vx\| + \|\vy\|. \]
 
+\subsection*{Středové pravidlo}
+
+\[ \mathcal{J}(\sigma) = \sum_{i = 1}^n f \left( \frac{x_{i-1}+x_i}{2} \right) \cdot \Delta \]
+
+\subsection*{Odhad chyby ve středovém pravidlu}
+
+\[ \left|\int^b_a f(x) dx - \mathcal{J}_{\mathrm{midpoint}}\right| \leq \frac{M (b-a)^3}{24 n^2}. \]
+
+\subsection*{Riemannova konstrukce pro hyperkvádr}
+
+\begin{enumerate}
+    \item Mějme funkci dvou proměnných $f$ definovanou a omezenou na obdélníku $D :=
+              \langle a_1, b_1 \rangle \times \langle a_2, b_2 \rangle$.
+    \item Pro dělení $\sigma_x = \{x_0 = a_1 < x_1 < \cdots < x_n = b_1\}$ intervalu
+          $\langle a_1, b_1 \rangle$ a $\sigma_y = \{y_0 = a_2 < y_1 < \cdots < y_m = b_2
+              \}$ intervalu $\langle a_2, b_2 \rangle$ definujme
+          \begin{align*}
+              m_{i,j} & := \inf \{ f(x,y) \mid (x,y) \in \langle x_{i-1}, x_{i} \rangle \times \langle y_{j-1}, y_j \rangle\},                                      \\
+              M_{i,j} & := \sup \{ f(x,y) \mid (x,y) \in \langle x_{i-1}, x_{i} \rangle \times \langle y_{j-1}, y_j \rangle\},  \quad i \in \hat n, \ j \in \hat m.
+          \end{align*}
+          Množinu $\sigma = \sigma_x \times \sigma_y$ nazveme \textbf{dělením obdélníku $D$}.
+    \item Dále definujme \textbf{dolní a horní součty funkce $f$ na obdélníku $D$ při
+              dělení $\sigma$} předpisy
+          \begin{align*}
+              s(f, \sigma) & := \sum_{i=1}^n \sum_{j=1}^m m_{i,j} (x_{i-1} - x_i)(y_{j-1} -
+              y_j),                                                                         \\ S(f, \sigma) & := \sum_{i=1}^n \sum_{j=1}^m M_{i,j} (x_{i-1} -
+                 x_i)(y_{j-1} - y_j).
+          \end{align*}
+    \item Nyní pro funkci $f$ a obdélník $D$ definujeme \textbf{horní a dolní integrál
+              funkce $f$ na obdélníku $D$} následujícím předpisem
+          \begin{align*}
+              \overline{\int_D} f(x,y)\,dxdy  & := \inf\{ S(f, \sigma) \mid \sigma \ \text{dělení obdélníku} \ D \}, \\
+              \underline{\int_D} f(x,y)\,dxdy & := \sup\{ s(f, \sigma) \mid \sigma \ \text{dělení obdélníku} \ D \}.
+          \end{align*}
+    \item Omezenou funkci $f$ nazveme \textbf{Riemannovsky integrabilní na obdélníku
+              $D$}, právě když
+          \[ \overline{\int_D} f(x,y) \,dxdy = \underline{\int_D} f(x,y) \,dxdy. \]
+          Tuto společnou reálnou hodnotu potom nazýváme \textbf{Riemannovým integrálem
+              funkce $f$ na obdélníku $D$} a značíme ji
+          \[ \int_D f(x,y)\,dxdy \quad \text{nebo} \quad \int_D f. \]
+\end{enumerate}
+
+\subsection*{Taylorova věta do kvadratických členů s odhadem chyby}
+
+Mějme funkci $f: D_f \to \R$, $D_f \subset \R^n$, mající spojité všechny
+parciální derivace do třetího řádu včetně na okolí $U_\va$ bodu $\va \in D_f$.
+Potom existuje konstanta $M > 0$ taková, že pro každé $\vx \in U_\va$ platí
+
+\[ f(\vx) = f(\va) + \nabla f(\va) \cdot (\vx - \va) + \frac{1}{2} (\vx - \va)^T \cdot \nabla^2 f(\va) \cdot (\vx - \va) + R_2(\vx), \]
+
+\noindent kde $|R_2(\vx)| \leq M \|\vx - \va\|^3$.
+
 \pagebreak

@@ -110,4 +110,59 @@ Pro $\vx_1$ zafixujeme $y = 0$ a pro $\vx_2$ zafixujeme $x = 0$. Potom pro:
 
 \noindent Pokud vybereme pro libovolné okolí $\vx_1$ a $\vx_2$ podle těchto podmínek, tak budou patřit do ukolí $U_\theta$ a bude pro ně splněna podmínka.
 
+\subsection*{Důkaz věty o konvergenci a vzálenosti}
+
+Chceme dokázat: $\lim\limits_{k\to\infty} \vx_k = \va \Leftrightarrow
+    \lim\limits_{k\to\infty} \| \vx_k - a \| = 0$
+
+\noindent Ekvivalenci dokážeme tím, že dokážeme $A \Rightarrow B$ a $B \Rightarrow A$
+
+\begin{enumerate}
+    \item $\Rightarrow$:
+          Předpoklad: $(\forall U_a(\epsilon_0))(\exists n_0 \in \mathbb{N})(\forall k > n_0: \vx_k \in U_a)$, tím pádem:
+
+          \[ \sqrt{({(\vx_k)}_1 - \va_1)^2 + \cdots + ({(\vx_k)}_j - \va_j)^2} < \epsilon_0 \]
+          \noindent Chceme dokázat, že: $(\forall U_0(\epsilon_1))(\exists n_1 \in \mathbb{N})(\forall k > n_1: \| \vx_k - \va \| \in U_0)$, tím pádem:
+
+          \[ \sqrt{({(\vx_k)}_1 - \va_1)^2 + \cdots + ({(\vx_k)}_j - \va_j)^2} < \epsilon_1 \]
+
+          \noindent Od nějakého $n_1$. Je to stejná rovnost jako u předpokladu a ten nám garantuje, že pro libovolná $U_a$ existuje $n_0$, které tuto nerovnost splňuje. Tím pádem stačí vzít $U_a(\epsilon_1)$ a k němui správné $n_0$ a pak položit $n_1 = n_0$.
+    \item $\Leftarrow$: úplně stejně
+\end{enumerate}
+
+\subsection*{Důkaz principu superpozice}
+
+\begin{align*}
+    x_{n + k} + \sum_{i = 0}^{k - 1} c_{i, n}x_{n + i} & = b_n       \\
+    x_{n + k} + \sum_{i = 0}^{k - 1} c_{i, n}x_{n + i} & = \hat{b}_n
+\end{align*}
+
+\noindent $(X_n)_{n = n_0}^\infty$ a $(Y_n)_{n = n_0}$ jsou řešením těchto dvou rovnic. Potom $(X_n + \alpha Y_n)_{n = n_0}^\infty$ je řešením:
+
+\[ x_{n + k} + \sum_{i = 0}^{k - 1} c_{i, n}x_{n + i} = b_n + \alpha \hat{b}_n\]
+
+\noindent Dosazením do prvních dvou rovnic dostaneme:
+
+\begin{align*}
+    X_{n + k} + \sum_{i = 0}^{k - 1} c_{i, n}X_{n + i} & = b_n       \\
+    Y_{n + k} + \sum_{i = 0}^{k - 1} c_{i, n}Y_{n + i} & = \hat{b}_n
+\end{align*}
+
+Dosazením do poslední rovnice dostaneme:
+\begin{center}
+    $X_{n + k} + \alpha Y_{n + k} + \sum_{i = 0}^{k - 1} c_{i, n}X_{n + i} + c_{i, n} \alpha Y_{n + i} = X_{n + k} + \sum_{i = 0}^{k - 1} (c_{i, n}X_{n + i}) +  \alpha (Y_{n + k} + \sum_{i = 0}^{k - 1} c_{i, n} Y_{n + i}) = b_n + \alpha \hat{b}_n$
+\end{center}
+
+\subsection*{Důkaz, že $\forall x \in \mathbb{R}: e^x > 0$}
+
+\begin{enumerate}
+    \item $e^0 = \sum_{k=0}^\infty \frac{0^k}{k!} = 1 + 0 + 0 + \cdots = 1.$
+    \item \begin{align*}
+              e^x \cdot e^y & = \left( \sum_{k=0}^\infty \frac{x^k}{k!} \right) \cdot \left( \sum_{\ell = 0}^\infty \frac{y^\ell}{\ell!} \right) =                                                         \\
+                            & = \sum_{k=0}^\infty \sum_{\ell=0}^k \frac{x^\ell}{\ell!} \frac{y^{k-\ell}}{(k-\ell)!} = \sum_{k=0}^\infty \frac{1}{k!} \sum_{\ell = 0}^k \binom{k}{\ell} x^\ell y^{k-\ell} = \\
+                            & = \sum_{k=0}^\infty \frac{(x+y)^k}{k!} = e^{x+y}.
+          \end{align*}
+    \item $\forall x \in \mathbb{R}$ platí tím pádem: $e^xe^{-x} = 1$, tím pádem $\forall x \in \mathbb{R}:  e^x \ne 0$.
+\end{enumerate}
+
 \pagebreak
