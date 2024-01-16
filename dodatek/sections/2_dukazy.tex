@@ -12,7 +12,7 @@ Pro libovolné $x\in\R$ různé od $c$ dostáváme
     \item $|x - c| \cdot L > 1$, tedy $|x - c| > R$, pak podle podílového kritéria je $\displaystyle\lim_{k\to\infty} |a_k (x-c)^k| = +\infty$. Tudíž nemůže být splněna nutná podmínka konvergence zkoumané řady (tj. neplatí $\displaystyle\lim_{k\to\infty} a_k (x-c)^k = 0$).
 \end{itemize}
 
-\subsection*{Důkaz per partes}
+\subsection*{Důkaz per partes v neurčitém integrálu}
 
 Tvrzení věty můžeme přímo ověřit derivováním. Platí
 
@@ -20,5 +20,94 @@ Tvrzení věty můžeme přímo ověřit derivováním. Platí
 
 \noindent Ve výpočtu jsme dále použili známého Leibnizova pravidla pro derivování součinu
 funkcí.
+
+\subsection*{Důkaz limity součtu vektorových posloupností}
+
+Předpoklad: $\lim\limits_{k\to\infty} \vx_k = \va \wedge
+    \lim\limits_{k\to\infty} \vy_k = \vb$, z toho plyne: $\forall j \in \hat{n}:
+    \lim\limits_{k\to\infty} (\vx_k)_j = \va_j \wedge \lim\limits_{k\to\infty}
+    (\vy_k)_j = \vb_j$ (Konvergence po složkách).
+
+\vspace{1em}
+
+\noindent Chceme dokázat, že $\lim\limits_{k\to\infty} (\vx_k + \vy_k) = \va + \vb$.
+
+\[ \forall j \in \hat{n}: \va_j + \vb_j = \lim\limits_{k\to\infty} (\vx_k)_j + \lim\limits_{k\to\infty} (\vy_k)_j = \lim\limits_{k\to\infty} (\vx_k)_j + (\vy_k)_j\]
+
+\noindent Poslední krok jsme mohli udělat díky MA1 (limita součtu jednoduchých posloupností).
+
+\noindent Díky větě o konvergenci po složkách víme, že posloupnost konverguje k bodu \textbf{právě tehdy}, když konvergují její složky.
+
+\subsection*{Důkaz, že $|R_{n,a}(x)| \leq |R_{n-1,a}(x)|$}
+
+Z Taylorova vzorce: \[ |R_{n,a}(x)| = |f(x) - T_{n, a}(x)| \hspace{3mm}\text{a}\hspace{3mm} |R_{n-1,a}(x)| = |f(x) - T_{n - 1, a}(x)| \]
+
+\noindent Protože $T_{n - 1, a}(x)$ je polynom stupně nejvýše $n$, různý od $T_{n, a}(x)$, pak platí (Věta o nejlepší aproximaci):
+
+\[ |f(x) - T_{n, a}(x)| \leq |f(x) - T_{n - 1, a}(x)| \]
+
+\noindent Což je to samé jako:
+
+\[ |R_{n,a}(x)| \leq |R_{n-1,a}(x)| \]
+
+\subsection*{Důkaz věty o substituci I v neurčitém integrálu}
+
+$F$ je primitivní funkcí k funkci $f$, tj. $F'(x) = f(x)$ pro každé $x\in(a,b)$. Podle věty o derivaci složené funkce dostaneme
+
+\[ (F\circ \varphi)'(x) = F'\big( \varphi(x)  \big) \cdot \varphi'(x) = f\big( \varphi(x) \big) \cdot \varphi'(x), \]
+
+\noindent pro každé $x\in(\alpha,\beta)$.
+
+\subsection*{Důkaz, že $\forall x \in \langle a, b\rangle:  f(x) \leq g(x) \Rightarrow \int_a^b f(x)dx \leq \int_a^b g(x)dx$}
+
+Nejprve určitě platí pro libovolné $m, n \in \langle a, b \rangle$, kde $n >
+    m$:
+
+\[ \sup \{f(x)| x \in \langle m, n \rangle\} \leq \sup \{g(x)| x \in \langle m, n \rangle\}\]
+
+\noindent Pak vezměme inegrální součet obou funkcí:
+
+\[ \mathcal{J}(\sigma,f) = \sum_{i=1}^n f(\alpha_i) \Delta_i, \]
+
+\noindent kde $\alpha_i$ budeme brát vždy jako $f(\alpha_i) = \sup \{f(x)| x \in \langle x_{i-1}, x_{i} \rangle\}$ (argument pro které nabývá funkce na tomto intervalu maximum).
+
+\noindent Potom platí $\forall \sigma$ dělení intervalu $\langle a, b\rangle$:
+
+\begin{align*}
+    \mathcal{J}(\sigma, f)                            & \leq \mathcal{J}(\sigma, g)                            \\
+    \lim\limits_{n\to\infty} \mathcal{J}(\sigma_n, f) & \leq \lim\limits_{n\to\infty} \mathcal{J}(\sigma_n, g) \\
+    \int_a^b f(x)dx                                   & \leq \int_a^b g(x)dx
+\end{align*}
+
+\subsection*{Důkaz, že $f(x, y) = x^2 + y^2$ má v bodě $\theta$ ostré lokální minimum}
+
+Chceme dokázat, že:
+
+\[ (\exists U_\theta(\epsilon))(\forall \vx \in U_\theta \cap D_f)(\vx \ne \theta \Rightarrow f(\vx) > f(\theta)) \]
+
+\noindent Pro $x \ne 0$ a $y \ne 0$:
+
+\[ x^2 + y^2 > 0 \]
+
+\noindent platí vždy $\Rightarrow$ můžeme vzít libovolné $\epsilon$.
+
+\subsection*{Důkaz, že $f(x, y) = x^2 - y^2$ nemá v bodě $\theta$ extrém.}
+
+$f(x, y) = x^2 - y^2$, $\frac{\partial f}{\partial x}(x, y) = 2x$, $\frac{\partial f}{\partial y}(x, y) = -2y$
+
+\noindent $\nabla f(x, y) = (2x, -2y)$, $\nabla f(0, 0) = \theta$
+
+\vspace{0.5em}
+
+\noindent Chceme dokázat:
+
+\[ (\forall U_\theta(\epsilon))(\exists \vx_1, \vx_2 \in U_a \cap D_f)(f(\vx_1) > f(\theta) \wedge f(\vx_2) < f(\theta)) \]
+
+\noindent Pro $\vx_1, \vx_2$ má platit: $d(\vx, \theta) < \epsilon \Leftrightarrow \sqrt{x^2 + y^2} < \epsilon$.
+Pro $\vx_1$ zafixujeme $y = 0$ a pro $\vx_2$ zafixujeme $x = 0$. Potom pro:
+
+\[ \vx_1: x < \epsilon \hspace{3mm} \text{a} \hspace{3mm} \vx_2: y < \epsilon \]
+
+\noindent Pokud vybereme pro libovolné okolí $\vx_1$ a $\vx_2$ podle těchto podmínek, tak budou patřit do ukolí $U_\theta$ a bude pro ně splněna podmínka.
 
 \pagebreak
